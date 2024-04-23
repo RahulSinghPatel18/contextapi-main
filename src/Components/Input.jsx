@@ -1,45 +1,29 @@
-// import React from 'react';
-
-import { useRef } from "react"
-
-// function withCustomInput(InputComponent, placeholder, name) {
-//   return function(props) {
-//     return <InputComponent {...props} placeholder={placeholder} name={name} />;
-//   };
-// }
-
-// function MyInput(props) {
-//   return <input type="text" {...props} />;
-// }
-
-// const CustomInput = withCustomInput(MyInput, "Enter your name", "username");
-
-// function Input() {
-//   return (
-//     <div>
-//       <CustomInput />
-//     </div>
-//   );
-// }
-
-// export default Input;
 
 
+import React, { useRef } from 'react'
 
 const Input = (props) => {
+    let show = useRef()
 
-  const ShowErr = useRef()
-  
-  const submithandeler =(e)=>{
-    // console.log(e)
-    if(ShowErr.current.value.lenght < 4)
-    e.style.border = '2px solid red'
-    console.log(ShowErr.current.value)
-  }
+    const change = (e)=>{
+        const inp = show.current
+        if(inp.value.length <  8){
+            console.log(inp)
+            inp.style.border = '1px solid red'
+            // inp.className='border-[1px] border-red-400]'
+        }
+        else{
+            inp.style.border = '1px solid black'
+        }
+    }
+
   return (
-    <div>
-      <input ref={ShowErr} onChange={submithandeler} type="text" placeholder="Enter your name " />
-    </div>
+  <>
+ <div style={{textAlign:'center'}}>
+ <input style={{border:"2px solid black",padding:'6px', borderRadius:"5px"}} onChange={change} ref={show} placeholder='enter name here'  className='outline-none' {...props}/>
+  
+ </div>
+  </>
   )
 }
 

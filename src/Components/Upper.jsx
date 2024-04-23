@@ -22,7 +22,7 @@ const Uppercase = withUppercase(MyComponent);
 function Upper() {
   return (
     <div>
-      <Uppercase>Hello  yash</Uppercase>
+      <Uppercase style={{textAlign:'center'}}>Hello  Rahul</Uppercase>
       <Uppercase>World</Uppercase>
     </div>
   );

@@ -8,12 +8,12 @@ import Todocontext from './context/Todocontext';
 
 
 const App = () => {
-  const [task,settask] = useContext(Todocontext)
+  // const [task,settask] = useContext(Todocontext)
   return (
     <div>
       app
       
-      <Display info='hello from yash'>
+      <Display info='hello am rahul'>
         <h1>hello </h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi accusantium quo odit hic exercitationem consectetur?</p>
       </Display>
